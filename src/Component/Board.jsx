@@ -44,9 +44,9 @@ const Board = () => {
     }
     const isWinner = checkWinner();
     return (
-        <div className="board-container">
-            {isWinner ? <><h1 className="text-5xl ">{isWinner}  </h1> <br /><button type="button" className=" text-white bg-purple-600  px-4 py-2 rounded " onClick={handleReset}>Play Again</button></> : <>
-                <h4 className=" text-center m-2">Player {isXTurn ? 'X' : '0'} Please move</h4>
+        <div className="board-container ">
+            {isWinner ? <><h1 className="text-5xl text-center">{isWinner}  </h1> <div className="  flex justify-center items-center  m-14"><button type="button" className=" text-white bg-green-600  px-4 py-2 rounded " onClick={handleReset}>Play Again</button></div></> : <>
+                <h4 className="text-center m-2">Player {isXTurn ? 'X' : '0'} Please move</h4>
                 <div className="board-row">
                     <Square onClick={() => handleClick(0)} value={state[0]} />
                     <Square onClick={() => handleClick(1)} value={state[1]} />
